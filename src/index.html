@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonymous Message Board</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+    body{
+     background: rebeccapurple;
+      align-items: center;
+      flex-direction: column;
+      height: 500px;
+    }
+    h1{
+      font-family: 'Jost';
+      font-style: normal;
+    }
+    .message-wrapper{
+      align-items: center;
+      width: 1000px;
+      height: 135px;
+      border: 1px solid #BF5813;
+      border-radius: 5px;
+      flex-direction: column;
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    #message-input{
+      height: 100px;
+      width: 995px;
+      background: bisque;
+      font-family: 'Jokerman';
+      z-index: 2;
+    }
+    #post-button{
+      background: #cad2c1;
+      margin-bottom: 0px;
+    }
+    #imagepeopletalking{
+      margin-top: 300px;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+<h1> Type a cool message!</h1>
+
+<div id="message-board">
+</div>
+<div>
+  <img src="peopletalking.png" alt="People Talking" id="imagepeopletalking" >
+</div>
+<div class="message-wrapper">
+  <textarea id="message-input" placeholder="Type your message (max 128 characters)"></textarea>
+  <button id="post-button" onclick="postMessage()">Post Message</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
